@@ -1,7 +1,10 @@
 package main
 
-import"fmt"
+import (
+	"github.com/Sazikoff/hexlet-struct/internal/structure"
+	// "fmt"
+)
 
 func main() {
-	fmt.Println("Hello, Go!")
+	structure.Bibica()
 }
