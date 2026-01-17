@@ -1,30 +1,25 @@
 package main
 
 import (
+	// "fmt"
+
 	"fmt"
-	"github.com/Sazikoff/hexlet-struct/internal/employees"
-	"github.com/Sazikoff/hexlet-struct/internal/payroll"
+
+	"github.com/Sazikoff/hexlet-struct/internal/structure"
+	// "github.com/Sazikoff/hexlet-struct/internal/employees"
+	// "github.com/Sazikoff/hexlet-struct/internal/payroll"
 )
 
 func main() {
-	alex := employees.Employee{
-
-		Name:     "Alex",
-		Position: "Junior",
-		// baseSalary: 100,
-		Skills: []string{"hard worker", "smart", "Honest"},
+	c := structure.Candidate{
+		Name:            "Irina",
+		ExperienceYears: 5,
+		Skills:          []string{"Go", "Docker", "Kubernetes"},
+		Remote:          true,
+		DesiredSalary:   4200,
 	}
 
-	var test bool
-	for {
-		test = alex.SetBaseSalary(100)
-		if test == true {
-			break
-		}
-	}
-	fmt.Println(alex.BaseSalary())
-	dirtyCash := payroll.CalcGross(alex, 50)
-	fmt.Println(dirtyCash)
-	fmt.Println(payroll.CalcNet(dirtyCash, 0.13))
-
+	fmt.Print(structure.DescribeCandidate(c)) // Irina: 5y exp, salary: 4200, remote: yes
+	fmt.Println(structure.HasSkill(c, "Go"))    // true
+	structure.HasSkill(c, "Rust")  // false
 }
