@@ -1,6 +1,7 @@
 package payroll
 
-import "github.com/Sazikoff/hexlet-struct/internal/employees"
+import "github.com/Sazikoff/hexlet-struct/internal/diff/employees"
+
 
 func CalcGross(e employees.Employee, bonusPct float64) float64 {
 	return e.BaseSalary() + bonusPct
@@ -9,3 +10,4 @@ func CalcGross(e employees.Employee, bonusPct float64) float64 {
 func CalcNet(gross float64, taxPct float64) float64 {
 	return gross*(1-taxPct)
 }
+
