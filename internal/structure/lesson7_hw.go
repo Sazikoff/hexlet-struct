@@ -5,8 +5,8 @@ import (
 )
 
 type ReportConfig struct {
-	Title string
-	Limit int
+	Title           string
+	Limit           int
 	IncludeArchived bool
 }
 
@@ -20,8 +20,8 @@ func NewReportConfig(title string, limit int, includeArchived bool) (ReportConfi
 	}
 
 	return ReportConfig{
-		Title: title,
-		Limit: limit,
+		Title:           title,
+		Limit:           limit,
 		IncludeArchived: includeArchived,
 	}, nil
 }

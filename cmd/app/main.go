@@ -9,5 +9,5 @@ import (
 )
 
 func main() {
-	Run7()
+	Run8()
 }
