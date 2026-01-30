@@ -9,5 +9,6 @@ import (
 )
 
 func main() {
-	Run12()
+	n := EmailSender{}
+	Send(n)
 }
